@@ -1,6 +1,6 @@
-// +build !linux
+//go:build !linux
 
-package lumberjack
+package filelogger
 
 import (
 	"os"

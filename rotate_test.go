@@ -1,6 +1,6 @@
-// +build linux
+//go:build linux
 
-package lumberjack
+package filelogger
 
 import (
 	"log"
@@ -19,7 +19,10 @@ func ExampleLogger_Rotate() {
 	go func() {
 		for {
 			<-c
-			l.Rotate()
+			err := l.Rotate()
+			if err != nil {
+				panic(err)
+			}
 		}
 	}()
 }

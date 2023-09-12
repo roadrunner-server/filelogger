@@ -1,3 +1,5 @@
-module gopkg.in/natefinch/lumberjack.v2
+module github.com/roadrunner-server/filelogger
 
-go 1.13
+go 1.21
+
+toolchain go1.21.1
